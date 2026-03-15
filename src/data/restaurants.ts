@@ -177,5 +177,145 @@ export const RESTAURANTS: Restaurant[] = [
     ],
     position: [116.3060, 39.9940],
     markerColor: 'bg-secondary'
+  },
+  {
+    id: '6',
+    name: '川味小郡肝串串香',
+    tag: '麻辣串串',
+    status: '正在营业',
+    statusColor: 'bg-secondary-container text-on-secondary-container',
+    score: 4.7,
+    distance: '步行 6 分钟',
+    price: '¥40-60',
+    image: 'https://images.unsplash.com/photo-1611270629569-8b357cb88da9?w=400&h=400&fit=crop',
+    aiSummary: '串串种类丰富，锅底正宗，性价比高，学生党首选。',
+    tags: ['平价', '适合聚餐', '麻辣'],
+    aiDeepSummary: '基于 178 条评论分析：口味评分 4.7 分，价格评价 4.8 分，分量 4.6 分。关键词：串串种类多、锅底香、性价比高、适合聚餐。情感倾向正面占比 91%，晚市生意火爆。',
+    atmosphere: '市井烟火、热闹非凡、麻辣鲜香',
+    directions: '北门美食街内，从北门左转步行 100 米。骑行 3 分钟，公交站（北门站）步行 2 分钟。',
+    reviews: [
+      { id: '1', user: '麻辣爱好者', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=16', content: '锅底越煮越香，串串种类超级多', rating: 5, date: '2024-01-15' },
+      { id: '2', user: '室友聚餐', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=17', content: '和室友一起来吃，人均40吃到撑', rating: 5, date: '2024-01-13' },
+      { id: '3', user: '夜宵党', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=18', content: '晚上9点去还要排队，但味道真的值', rating: 4, date: '2024-01-11' }
+    ],
+    mustTryDishes: [
+      { name: '招牌牛肉串', price: '¥2/串', image: 'https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=200&h=200&fit=crop', description: '秘制腌制，鲜嫩可口', popularity: 97 },
+      { name: '郡肝', price: '¥1.5/串', image: 'https://images.unsplash.com/photo-1604909052743-94e838986d24?w=200&h=200&fit=crop', description: '脆爽弹牙，必点招牌', popularity: 95 },
+      { name: '冒脑花', price: '¥15', image: 'https://images.unsplash.com/photo-1548943487-a2e4e43b4853?w=200&h=200&fit=crop', description: '麻辣鲜香，入口即化', popularity: 88 }
+    ],
+    position: [116.3180, 39.9960],
+    markerColor: 'bg-error'
+  },
+  {
+    id: '7',
+    name: '鱼你在一起 · 烤鱼',
+    tag: '特色烤鱼',
+    status: '正在营业',
+    statusColor: 'bg-secondary-container text-on-secondary-container',
+    score: 4.6,
+    distance: '步行 7 分钟',
+    price: '¥45-70',
+    image: 'https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=400&h=400&fit=crop',
+    aiSummary: '鱼肉鲜嫩入味，配菜丰富，适合多人聚餐。',
+    tags: ['适合聚餐', '分量足', '深夜营业'],
+    aiDeepSummary: '基于 145 条评论分析：口味评分 4.5 分，分量 4.8 分，服务 4.4 分。关键词：鱼肉鲜嫩、配菜丰富、性价比高、适合聚餐。情感倾向正面占比 87%，是工程学院学生的宵夜圣地。',
+    atmosphere: '烟火气息、热闹非凡、宵夜首选',
+    directions: '东门夜市旁，从东门右转夜市内。骑行 4 分钟，公交站（东门站）步行 3 分钟。',
+    reviews: [
+      { id: '1', user: '夜宵王者', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=19', content: '晚上10点去还要等位，鱼肉超嫩', rating: 5, date: '2024-01-14' },
+      { id: '2', user: '工院小李', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=20', content: '我们宿舍聚餐首选，分量足够4人吃', rating: 5, date: '2024-01-12' },
+      { id: '3', user: '吃遍全校', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=21', content: '配菜可以免费续，性价比拉满', rating: 4, date: '2024-01-09' }
+    ],
+    mustTryDishes: [
+      { name: '香辣烤鱼', price: '¥58', image: 'https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=200&h=200&fit=crop', description: '招牌必点，香辣过瘾', popularity: 96 },
+      { name: '蒜香烤鱼', price: '¥55', image: 'https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=200&h=200&fit=crop', description: '蒜香浓郁，老少皆宜', popularity: 92 },
+      { name: '烤鱼配菜', price: '¥12', image: 'https://images.unsplash.com/photo-1548943487-a2e4e43b4853?w=200&h=200&fit=crop', description: '蔬菜拼盘，可免费续', popularity: 85 }
+    ],
+    position: [116.3250, 40.0030],
+    markerColor: 'bg-error'
+  },
+  {
+    id: '8',
+    name: '麦香基 · 炸鸡汉堡',
+    tag: '西式快餐',
+    status: '正在营业',
+    statusColor: 'bg-secondary-container text-on-secondary-container',
+    score: 4.5,
+    distance: '步行 4 分钟',
+    price: '¥20-35',
+    image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=400&fit=crop',
+    aiSummary: '汉堡个头大，味道稳定，出餐快。',
+    tags: ['出餐快', '平价', '饱腹'],
+    aiDeepSummary: '基于 234 条评论分析：口味评分 4.4 分，出餐速度 4.9 分，性价比 4.6 分。关键词：出餐快、实惠、饱腹感强、味道稳定。情感倾向正面占比 85%，是赶课族的首选。',
+    atmosphere: '美式风格、简洁明亮、快捷便利',
+    directions: '第一食堂一楼，从宿舍区步行 4 分钟。骑行 1 分钟，校园巴士第一食堂站。',
+    reviews: [
+      { id: '1', user: '赶课大学生', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=22', content: '上课前买一个带走，三分钟搞定', rating: 5, date: '2024-01-15' },
+      { id: '2', user: '快餐爱好者', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=23', content: '汉堡比外面其他快餐店大不少', rating: 4, date: '2024-01-13' },
+      { id: '3', user: '运动boy', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=24', content: '训练完补充蛋白质的好选择', rating: 4, date: '2024-01-10' }
+    ],
+    mustTryDishes: [
+      { name: '香辣鸡腿堡', price: '¥15', image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=200&h=200&fit=crop', description: '招牌汉堡，辣味适中', popularity: 98 },
+      { name: '黄金脆皮鸡', price: '¥12', image: 'https://images.unsplash.com/photo-1626645738196-c2a72c7d6e5e?w=200&h=200&fit=crop', description: '外酥里嫩，个头超大', popularity: 94 },
+      { name: '薯条大份', price: '¥8', image: 'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=200&h=200&fit=crop', description: '现炸酥脆，份量足', popularity: 89 }
+    ],
+    position: [116.3150, 39.9990],
+    markerColor: 'bg-primary'
+  },
+  {
+    id: '9',
+    name: '东北饺子王',
+    tag: '手工水饺',
+    status: '正在营业',
+    statusColor: 'bg-secondary-container text-on-secondary-container',
+    score: 4.8,
+    distance: '步行 5 分钟',
+    price: '¥15-25',
+    image: 'https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=400&h=400&fit=crop',
+    aiSummary: '现包手工饺子，皮薄馅大，味道家常。',
+    tags: ['手工', '平价', '家常味'],
+    aiDeepSummary: '基于 167 条评论分析：口味评分 4.8 分，分量 4.9 分，性价比 4.9 分。关键词：皮薄馅大、现包现煮、味道家常、实惠。情感倾向正面占比 95%，是解决日常用餐的好选择。',
+    atmosphere: '家常温馨、烟火气息、实惠亲民',
+    directions: '西门商业街内，从西门左转步行 80 米。骑行 2 分钟，公交站（西门站）步行 1 分钟。',
+    reviews: [
+      { id: '1', user: '北方小伙', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=25', content: '在南方能吃到这么正宗的东北饺子感动哭', rating: 5, date: '2024-01-14' },
+      { id: '2', user: '家常菜爱好者', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=26', content: '味道就像妈妈包的饺子，超级暖心', rating: 5, date: '2024-01-12' },
+      { id: '3', user: '省钱达人', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=27', content: '15块一两管饱，还要啥自行车', rating: 5, date: '2024-01-09' }
+    ],
+    mustTryDishes: [
+      { name: '猪肉白菜', price: '¥15', image: 'https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=200&h=200&fit=crop', description: '经典口味，百吃不厌', popularity: 96 },
+      { name: '三鲜水饺', price: '¥18', image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?w=200&h=200&fit=crop', description: '虾仁猪肉，馅大皮薄', popularity: 93 },
+      { name: '酸菜饺子', price: '¥14', image: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=200&h=200&fit=crop', description: '东北特色，开胃爽口', popularity: 88 }
+    ],
+    position: [116.3000, 39.9920],
+    markerColor: 'bg-secondary'
+  },
+  {
+    id: '10',
+    name: '披萨小站',
+    tag: '意大利披萨',
+    status: '正在营业',
+    statusColor: 'bg-secondary-container text-on-secondary-container',
+    score: 4.7,
+    distance: '步行 10 分钟',
+    price: '¥30-50',
+    image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=400&fit=crop',
+    aiSummary: '手工披萨，饼底脆香，芝士拉丝。',
+    tags: ['高颜值', '适合聚会', '西餐'],
+    aiDeepSummary: '基于 123 条评论分析：口味评分 4.7 分，颜值 4.8 分，性价比 4.5 分。关键词：手工制作、芝士拉丝、饼底脆香、适合聚会。情感倾向正面占比 90%，是宿舍团建的首选。',
+    atmosphere: '意式风情、温馨浪漫、适合拍照',
+    directions: '南门商业街，从南门进入右转第一家。骑行 5 分钟，公交站（南门站）步行 3 分钟。',
+    reviews: [
+      { id: '1', user: '宿舍团建', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=28', content: '宿舍聚会点了个双拼，大家都超满意', rating: 5, date: '2024-01-15' },
+      { id: '2', user: '披萨控', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=29', content: '芝士拉丝超长，饼底也很脆', rating: 5, date: '2024-01-13' },
+      { id: '3', user: '拍照达人', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=30', content: '披萨颜值太高了朋友圈获赞无数', rating: 4, date: '2024-01-11' }
+    ],
+    mustTryDishes: [
+      { name: '超级至尊', price: '¥48', image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=200&h=200&fit=crop', description: '配料丰富，芝士满满', popularity: 97 },
+      { name: '榴莲披萨', price: '¥45', image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200&h=200&fit=crop', description: '榴莲控必点，浓郁香甜', popularity: 94 },
+      { name: '烤鸡翅', price: '¥15', image: 'https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=200&h=200&fit=crop', description: '外酥里嫩，经典小食', popularity: 86 }
+    ],
+    position: [116.3220, 40.0050],
+    markerColor: 'bg-secondary'
   }
 ];

@@ -14,6 +14,7 @@ export default function Restaurant({ setActiveTab }: RestaurantProps) {
   const handleNavigateToMap = (restaurant: typeof RESTAURANTS[0]) => {
     // Store the selected restaurant for map to use
     localStorage.setItem('selectedRestaurant', JSON.stringify(restaurant));
+    localStorage.setItem('navigateToRestaurant', JSON.stringify(restaurant));
     setActiveTab('map');
   };
 

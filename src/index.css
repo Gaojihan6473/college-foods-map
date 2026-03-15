@@ -62,6 +62,15 @@
 }
 
 @layer utilities {
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(-3deg); }
+    25% { transform: rotate(3deg); }
+    50% { transform: rotate(-3deg); }
+    75% { transform: rotate(3deg); }
+  }
+  .animate-wiggle {
+    animation: wiggle 0.5s ease-in-out;
+  }
   .pulse-gradient {
     background: linear-gradient(135deg, #ff6d00 0%, #9f4200 100%);
   }

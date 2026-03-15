@@ -10,17 +10,19 @@ A college campus food map application built with React + Vite that helps student
 
 ```bash
 npm install          # Install dependencies
-npm run dev          # Start development server
+npm run dev          # Start development server (port 3000)
 npm run build        # Build for production
 npm run preview      # Preview production build
+npm run lint         # TypeScript type check
 ```
 
-## Required Environment Variables
+## Environment Variables (Optional)
 
 Create `.env.local` with:
-- `MINIMAX_API_KEY` - MiniMax API key for AI features (model: M2.5)
-- `VITE_AMAP_KEY` - Amap (高德地图) JSAPI key
+- `VITE_AMAP_KEY` - Amap (高德地图) JSAPI key (required for map)
 - `VITE_AMAP_SECURITY_CODE` - Amap security key
+
+Note: AI features are simulated (random selection), no API key required.
 
 ## Architecture
 
@@ -33,7 +35,7 @@ React built-in hooks (`useState`, `useEffect`). No external state library (Redux
 ### Data Flow
 - Static restaurant data in `src/data/restaurants.ts`
 - Pages fetch/filter data locally - no API calls to backend
-- AI features call MiniMax API directly from client
+- AI features are simulated using random selection
 
 ### Pages Structure
 Each page component in `src/pages/` is self-contained. They receive the active tab state and navigation callback via props from App.tsx.
@@ -50,7 +52,7 @@ Each page component in `src/pages/` is self-contained. They receive the active t
 
 - The app uses a custom tab-based navigation (not URL-based routing)
 - Map component requires valid Amap API key to render
-- AI features (recommendations, review summaries) require MiniMax API key
+- AI features are simulated with random selection (no external API)
 - Tailwind CSS v4 uses `@import "tailwindcss"` syntax in CSS
 
 ## Demo Design Philosophy

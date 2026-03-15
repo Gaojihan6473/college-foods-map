@@ -11,10 +11,18 @@ import { Restaurant as RestaurantType } from './data/restaurants';
 export default function App() {
   const [activeTab, setActiveTab] = useState('decisions');
   const [selectedRestaurant, setSelectedRestaurant] = useState<RestaurantType | null>(null);
+  const [navigateToRestaurant, setNavigateToRestaurant] = useState<RestaurantType | null>(null);
 
   const handleNavigateToMap = (restaurant: RestaurantType) => {
+    // Clear selected restaurant first to prevent rendering issues
+    setSelectedRestaurant(null);
     localStorage.setItem('selectedRestaurant', JSON.stringify(restaurant));
-    setActiveTab('map');
+    localStorage.setItem('navigateToRestaurant', JSON.stringify(restaurant));
+    setNavigateToRestaurant(restaurant);
+    // Use setTimeout to ensure state is cleared before switching tab
+    setTimeout(() => {
+      setActiveTab('map');
+    }, 0);
   };
 
   const renderContent = () => {
@@ -33,7 +41,7 @@ export default function App() {
       case 'decisions':
         return <Decisions setActiveTab={setActiveTab} />;
       case 'map':
-        return <Map setActiveTab={setActiveTab} onRestaurantSelect={setSelectedRestaurant} />;
+        return <Map setActiveTab={setActiveTab} onRestaurantSelect={setSelectedRestaurant} navigateToRestaurant={navigateToRestaurant} onNavigateComplete={() => setNavigateToRestaurant(null)} />;
       case 'leaderboards':
         return <Leaderboards />;
       case 'footprint':
