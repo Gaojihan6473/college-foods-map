@@ -34,7 +34,7 @@ export default function Restaurant({ setActiveTab }: RestaurantProps) {
   return (
     <main className="flex-1 flex flex-col min-w-0 h-screen overflow-y-auto bg-background">
       {/* TopNavBar */}
-      <header className="px-6 py-4 flex items-center justify-between bg-surface relative z-40 border-b border-outline-variant/20">
+      <header className="px-8 py-4 flex items-center justify-between bg-surface relative z-40 border-b border-outline-variant/20">
         <div className="flex items-center gap-4 bg-surface-container-highest px-6 py-2.5 rounded-full w-full max-w-md">
           <span className="material-symbols-outlined text-on-surface-variant">search</span>
           <input className="bg-transparent border-none focus:ring-0 text-sm w-full outline-none" placeholder="搜索校内食堂、外卖、周边美食..." type="text"/>
@@ -49,9 +49,9 @@ export default function Restaurant({ setActiveTab }: RestaurantProps) {
         </div>
       </header>
 
-      <div className="max-w-5xl mx-auto px-6 py-8 w-full">
+      <div className="max-w-6xl mx-auto px-8 py-6 w-full">
         {/* Promotional Banner */}
-        <div className="w-full bg-gradient-to-r from-primary to-tertiary-container rounded-2xl p-6 md:p-8 mb-8 text-white flex flex-col md:flex-row items-start md:items-center justify-between shadow-lg relative overflow-hidden">
+        <div className="w-full bg-gradient-to-r from-primary to-tertiary-container rounded-2xl p-5 md:p-6 mb-6 text-white flex flex-col md:flex-row items-start md:items-center justify-between shadow-lg relative overflow-hidden">
           <div className="relative z-10 mb-4 md:mb-0">
             <h2 className="text-2xl md:text-3xl font-bold font-headline mb-2">春季校园美食节</h2>
             <p className="text-white/90 text-sm md:text-base">探索校园周边春季限定美味，最高享 5 折优惠</p>
@@ -103,53 +103,49 @@ export default function Restaurant({ setActiveTab }: RestaurantProps) {
         </div>
 
         {/* Restaurant List */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {RESTAURANTS.map(restaurant => (
-            <div 
+            <div
               key={restaurant.id}
               onClick={() => setSelectedId(restaurant.id)}
-              className="bg-surface-container-lowest p-4 rounded-2xl shadow-sm hover:shadow-md transition-all cursor-pointer flex gap-4 border border-transparent hover:border-primary/20 group"
+              className="bg-surface-container-lowest p-3 rounded-2xl shadow-sm hover:shadow-md transition-all cursor-pointer flex flex-col border border-transparent hover:border-primary/20 group"
             >
-              <div className="relative w-32 h-32 shrink-0 rounded-xl overflow-hidden">
+              <div className="relative w-full h-36 shrink-0 rounded-xl overflow-hidden mb-3">
                 <img src={restaurant.image} alt={restaurant.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerPolicy="no-referrer" />
                 <div className={`absolute top-2 left-2 ${restaurant.statusColor} px-2 py-0.5 rounded-full text-[9px] font-bold`}>
                   {restaurant.status}
                 </div>
               </div>
-              
-              <div className="flex-1 flex flex-col justify-between py-1">
-                <div>
-                  <div className="flex justify-between items-start mb-1">
-                    <h3 className="font-headline font-bold text-lg group-hover:text-primary transition-colors">{restaurant.name}</h3>
-                    <span className="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] px-2 py-0.5 rounded-full font-bold shrink-0">
-                      {restaurant.tag}
-                    </span>
-                  </div>
-                  
-                  <div className="flex items-center gap-3 text-sm mb-2">
-                    <div className="flex items-center text-secondary font-bold">
-                      <span className="material-symbols-outlined text-[14px] mr-0.5" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
-                      {restaurant.score}
-                    </div>
-                    <span className="text-on-surface-variant">·</span>
-                    <span className="text-on-surface-variant">人均 {restaurant.price}</span>
-                    <span className="text-on-surface-variant">·</span>
-                    <span className="text-on-surface-variant">{restaurant.distance}</span>
-                  </div>
 
-                  <div className="flex gap-2 mb-3">
-                    {restaurant.tags.map(tag => (
-                      <span key={tag} className="px-2 py-0.5 border border-outline-variant/50 text-on-surface-variant text-[10px] rounded-md">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+              <div className="flex flex-col gap-2">
+                <div className="flex justify-between items-start">
+                  <h3 className="font-headline font-bold text-base group-hover:text-primary transition-colors truncate flex-1">{restaurant.name}</h3>
+                  <span className="bg-tertiary-fixed text-on-tertiary-fixed text-[9px] px-1.5 py-0.5 rounded-full font-bold shrink-0">
+                    {restaurant.tag}
+                  </span>
                 </div>
 
-                <div className="bg-surface-container-low rounded-lg p-2.5 flex items-start gap-2">
-                  <span className="material-symbols-outlined text-primary text-[16px] mt-0.5">neurology</span>
-                  <p className="text-xs text-on-surface-variant leading-relaxed line-clamp-1">
-                    <span className="font-bold text-on-surface mr-1">AI 总结:</span>
+                <div className="flex items-center gap-2 text-sm">
+                  <div className="flex items-center text-secondary font-bold">
+                    <span className="material-symbols-outlined text-[12px] mr-0.5" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                    {restaurant.score}
+                  </div>
+                  <span className="text-on-surface-variant text-xs">人均 {restaurant.price}</span>
+                  <span className="text-on-surface-variant text-xs">{restaurant.distance}</span>
+                </div>
+
+                <div className="flex gap-1.5 flex-wrap">
+                  {restaurant.tags.map(tag => (
+                    <span key={tag} className="px-1.5 py-0.5 border border-outline-variant/50 text-on-surface-variant text-[9px] rounded">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="bg-surface-container-low rounded-lg px-2 py-1.5 flex items-center gap-1.5 mt-1 min-h-[28px]">
+                  <span className="material-symbols-outlined text-primary text-[14px] shrink-0">neurology</span>
+                  <p className="text-[10px] text-on-surface-variant leading-relaxed line-clamp-1">
+                    <span className="font-bold text-on-surface mr-1">AI:</span>
                     {restaurant.aiSummary}
                   </p>
                 </div>
